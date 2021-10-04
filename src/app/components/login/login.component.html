@@ -1,0 +1,36 @@
+<div class="body">
+  <div class="login">
+    <form [formGroup]="form" (ngSubmit)="entrar()">
+      <img src="./assets/img/ligin_user.png" />
+      <h1>Login</h1>
+      <mat-form-field class="miWdt" appearance="fill">
+        <mat-label>Usuario</mat-label>
+        <input
+          type="text"
+          autocomplete="off"
+          matInput
+          formControlName="usuario"
+        />
+      </mat-form-field>
+      <mat-form-field class="miWdt" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input
+          type="password"
+          autocomplete="off"
+          matInput
+          formControlName="password"
+        />
+      </mat-form-field>
+      <br />
+      <button
+        type="submit"
+        class="miWdt btn_login"
+        mat-raised-button
+        color="primary"
+        [disabled]="form.invalid"
+      >
+        Entrar
+      </button>
+    </form>
+  </div>
+</div>
